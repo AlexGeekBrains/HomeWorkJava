@@ -6,7 +6,7 @@ public class HomeWork2 {
         checkPositiveNegative(4);
         System.out.println(checkNumberNegative(-2));
         printWord("проверка", 4);
-        System.out.println(checkLeapYear(200));
+        System.out.println(checkLeapYear(4));
     }
     /*
     Написать метод, принимающий на вход два целых числа и проверяющий,
@@ -43,7 +43,7 @@ public class HomeWork2 {
      кроме каждого 100-го, при этом каждый 400-й – високосный.
      */
     public static boolean checkLeapYear(int year){
-        return (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0));
+        return (year % 400 == 0 || year % 4 == 0 && year % 100 != 0);
     }
 }
 
