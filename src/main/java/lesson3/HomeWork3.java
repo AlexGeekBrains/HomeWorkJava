@@ -98,7 +98,7 @@ public class HomeWork3 {
 
         System.out.println(checkBalance(new int[]{2, 2, 2, 1, 2, 2, 10, 1}));
 
-        shift(new int[]{2, 4, 6, 8, 10, 12, 16, 18}, 3);
+        shift(new int[]{2, 4, 6, 8, 10, 12, 16, 18}, -3);
     }
 
        /*
@@ -150,12 +150,12 @@ public class HomeWork3 {
      * (на два влево) -> [ 6, 1, 3, 5 ]. При каком n в какую сторону сдвиг можете выбирать сами.
      */
 
-    public static void shift(int[] arr, int integration) {
+    public static void shift(int[] arr, int numberShift) {
 
         int counter = 0;
         int vault = 0;
 
-        if (integration > 0) {
+        if (numberShift > 0) {
             do {
                 for (int i = arr.length - 1; i >= 0; i--) {
                     if (i == arr.length - 1) {
@@ -170,8 +170,8 @@ public class HomeWork3 {
 
                     }
                 }
-            } while (counter < integration);
-        } else if (integration < 0) {
+            } while (counter < numberShift);
+        } else if (numberShift < 0) {
 
             do {
                 for (int i = 0; i < arr.length; i++) {
@@ -187,7 +187,7 @@ public class HomeWork3 {
 
                     }
                 }
-            } while (counter > integration);
+            } while (counter > numberShift);
         } else {
             arr = arr;
         }
