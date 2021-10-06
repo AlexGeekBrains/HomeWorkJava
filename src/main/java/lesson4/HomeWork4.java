@@ -10,7 +10,7 @@ public class HomeWork4 {
     private static char[][] map;
 
     private static final int SIZE = 5;
-    private static final int WIN = 3;
+    private static final int WIN = 4;
 
     private static final char MAP_ELEMENT_EMPTY = '_';
     private static final char MAP_ELEMENT_X = 'X';
@@ -44,7 +44,10 @@ public class HomeWork4 {
             }
         }
     }
-
+        /*
+        Попробовать переписать логику проверки победы, чтобы она работала для поля 5х5 и количества фишек 4.
+        Очень желательно не делать это просто набором условий для каждой из возможных ситуаций;
+         */
     public static boolean checkWin(char element) {
         int countHorizontal = 0;
         int countVertical = 0;
@@ -78,7 +81,6 @@ public class HomeWork4 {
         }
 
         for (int i = 0; i < SIZE; i++) {
-            diagonalDown = 0;
             diagonalUp = 0;
             for (int j = 0; j < SIZE; j++) {
                 if (map[i][j] == element) {
@@ -90,6 +92,14 @@ public class HomeWork4 {
                             if (diagonalUp == WIN) return true;
                         }
                     }
+
+                }
+            }
+        }
+        for (int i = 0; i < SIZE; i++) {
+            diagonalDown = 0;
+            for (int j = 0; j < SIZE; j++) {
+                if (map[i][j] == element) {
                     for (int k = i, o = j; k < SIZE && o < SIZE; k++, o++) {
                         if (map[k][o] != element) {
                             diagonalDown = 0;
@@ -100,6 +110,7 @@ public class HomeWork4 {
                             }
                         }
                     }
+
                 }
             }
         }
