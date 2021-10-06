@@ -68,7 +68,6 @@ public class HomeWork3 {
             System.out.println();
         }
 
-
         System.out.println(Arrays.toString(returnArray(8, 9)));
 
 
