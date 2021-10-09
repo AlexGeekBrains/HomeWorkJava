@@ -18,7 +18,7 @@ public class HomeWork5 {
                 "acdc@mail.ru", "+79162369874", 150000, 41);
 
         employeeArr[2].setAge(49);
-              
+
 /*5. С помощью цикла вывести информацию только о сотрудниках старше 40 лет.*/
         for (int i = 0; i < employeeArr.length; i++) {
             if (employeeArr[i].getAge() > 40) {
